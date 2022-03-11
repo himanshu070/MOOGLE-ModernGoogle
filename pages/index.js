@@ -6,13 +6,13 @@ import styles from '../styles/Home.module.css'
 
 
 export default function Home() {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(false);
   console.log(darkTheme);
   return (
    <>
-      <div className="">
-         <div className='bg-gray-200 dark:bg-pink-900'>
-            <Navbar/>
+      <div className={darkTheme ? 'dark' : ''}>
+         <div className='bg-gray-100 dark:bg-gray-900 dark:text-gray-200 min-h-screen'>
+            <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
             <Routes/>
             <Footer/>
         </div>
@@ -20,3 +20,5 @@ export default function Home() {
    </>
   )
 }
+
+//packages installed - react-router-dom react-player react-loader-spinner use-debounce
