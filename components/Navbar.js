@@ -33,10 +33,11 @@ const Navbar = ({darkTheme, setDarkTheme}) => {
             </div>
           )}
         </button>
-
-        {/* Search Component  */}
-        <Search/>
       </div>
+
+      {/* Search Component  */}
+      <Search />
+      
     </div>
   );
 }
